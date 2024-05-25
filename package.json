@@ -4,17 +4,29 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -b",
+    "clean": "tsc -b --clean",
+    "eslint": "eslint .",
+    "test": "mocha test/*.spec.ts",
+    "test-cov": "nyc --reporter=lcovonly npm test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.6",
     "@types/node": "^20.12.12",
+    "@types/rewire": "^2.5.30",
     "@typescript-eslint/eslint-plugin": "^7.10.0",
     "@typescript-eslint/parser": "^7.10.0",
+    "chai": "^5.1.1",
     "eslint": "^8.56.0",
     "eslint-plugin-node": "^11.1.0",
+    "mocha": "^10.4.0",
+    "nyc": "^15.1.0",
+    "rewire": "^7.0.0",
+    "sinon": "^18.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
