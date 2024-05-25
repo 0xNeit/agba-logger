@@ -4,13 +4,24 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "prepublish": "pnpm clean && pnpm build",
     "build": "tsc -b",
     "clean": "tsc -b --clean",
     "eslint": "eslint .",
     "test": "mocha test/*.spec.ts",
     "test-cov": "nyc --reporter=lcovonly npm test"
   },
-  "keywords": [],
+  "files": [
+    "dist/**"
+  ],
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "logger",
+    "console",
+    "handler",
+    "framework",
+    "error"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
